@@ -1,0 +1,13 @@
+:root {
+  font-family: 'Source Serif Pro', serif;
+}
+
+body,
+html {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: skyblue;
+}
