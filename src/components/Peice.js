@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const PeiceStyle = styled.button`
+const PeiceStyle = styled.div`
   width: calc((100vmin / 7) - 10px);
   height: calc((100vmin / 7) - 10px);
   background: ${props => (props.color ? props.color : 'white')};

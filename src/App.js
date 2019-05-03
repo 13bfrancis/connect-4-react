@@ -35,6 +35,7 @@ const App = () => {
   const [isOver, setIsOver] = useState(false);
 
   const dropPeice = col => {
+    if (isOver) return;
     let color = isBlack ? 'black' : 'red';
     let newBoard = [...board];
     for (let i = 5; i >= 0; i--) {
