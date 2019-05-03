@@ -7,6 +7,8 @@ import { createBoard } from './board';
 import Peices from './components/Peices';
 
 const ConnectFour = styled.div`
+  padding-bottom: 20px;
+  box-sizing: border-box;
   height: 100vh;
   display: grid;
   grid-template-rows: repeat(7, minmax(25px, 1fr));
