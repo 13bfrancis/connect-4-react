@@ -41,12 +41,12 @@ const App = () => {
     for (let i = 5; i >= 0; i--) {
       if (!board[i][col]) {
         newBoard[i][col] = color;
+        setBoard(newBoard);
         checkWin(i, col, color);
         setIsBlack(!isBlack);
         break;
       }
     }
-    setBoard(newBoard);
   };
 
   const checkWin = (currRow, currCol, color) => {
