@@ -32,6 +32,7 @@ const Header = styled.header`
 const App = () => {
   const [isBlack, setIsBlack] = useState(false);
   const [board, setBoard] = useState(createBoard());
+  const [isOver, setIsOver] = useState(false);
 
   const dropPeice = col => {
     let color = isBlack ? 'black' : 'red';
@@ -65,7 +66,6 @@ const App = () => {
       col < 7 &&
       board[row][col] === color
     ) {
-      console.log(board[row][col]);
       vertCount++;
       row++;
     }
@@ -159,6 +159,7 @@ const App = () => {
       diagOne + diagTwo + 1 >= 4 ||
       diagThree + diagFour + 1 >= 4
     ) {
+      setIsOver(true);
       console.log(`${color} wins!!`);
     }
   };
@@ -168,7 +169,7 @@ const App = () => {
       <Header>
         <h1 onClick={checkWin}>Connect 4</h1>
       </Header>
-      <Peices dropPiece={dropPeice} board={board} />
+      <Peices isOver={isOver} dropPiece={dropPeice} board={board} />
     </ConnectFour>
   );
 };

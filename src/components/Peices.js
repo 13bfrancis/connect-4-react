@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 import Peice from './Peice';
 
-const Peices = ({ board, dropPiece }) => {
+const Peices = ({ board, dropPiece, isOver }) => {
   const peices = board.map((row, i) => {
     return row.map((peice, j) => (
       <Peice
@@ -14,10 +14,10 @@ const Peices = ({ board, dropPiece }) => {
         col={j}
         row={i}
         key={i * j + j}
+        isOver={isOver}
       />
     ));
   });
-  console.log(peices);
   return <>{peices}</>;
 };
 
