@@ -5,3 +5,4 @@ export const createBoard = () => {
   }
   return arr;
 };
+//numbering works likes this rows and then columns
